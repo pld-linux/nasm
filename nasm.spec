@@ -14,6 +14,7 @@ Patch1:		%{name}-3DNow.patch
 Patch2:		%{name}-boguself2.patch
 URL:		http://www.cryogen.com/nasm/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRequires:	autoconf
 BuildRequires:	texinfo
 BuildRequires:	perl
 Obsoletes:	nasm-doc
@@ -37,7 +38,7 @@ MMX opcode i ma macro capability. Zawiera tak¿e deassembler.
 
 %package rdoff
 Summary:	Tools for the RDOFF binary format, sometimes used with NASM
-Summary(pl):	Tools'y do formatu binarnego RDOFF. Czasem u¿ywane z NASM'em.
+Summary(pl):	Narzêdzia do formatu binarnego RDOFF, czasem u¿ywane z NASM-em
 Group:		Development/Tools
 Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
@@ -50,9 +51,9 @@ is sometimes used with the Netwide Assembler (NASM). These tools
 include linker, library manager, loader, and information dump.
 
 %description -l pl rdoff
-Tools'y do niezale¿nego od systemu operacyjnego formatu binarnego RDOFF,
-czasem u¿ywane z Netwide Assembler (NASM). Te narzêdzia zawieraj± linker,
-linker, library manager, loader oraz information dump.
+Narzêdzia do niezale¿nego od systemu operacyjnego formatu binarnego
+RDOFF, czasem u¿ywane z Netwide Assembler (NASM). Te narzêdzia
+zawieraj± linker, library manager, loader oraz information dump.
 
 %prep
 %setup -q
@@ -79,14 +80,14 @@ install doc/nasm.info* $RPM_BUILD_ROOT%{_infodir}
 gzip -9nf Changes Licence Readme Wishlist MODIFIED \
 	rdoff/README rdoff/Changes
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %post
 [ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %postun
 [ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)

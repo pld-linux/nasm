@@ -41,14 +41,14 @@ autoconf
 LDFLAGS="-s"; export LDFLAGS
 %configure
 
-make all rdf
+%{__make} all rdf
 
 (cd doc; make nasmdoc.texi; makeinfo nasmdoc.texi)
 
 %install 
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_infodir},%{_mandir}/man1}
-make INSTALLROOT=$RPM_BUILD_ROOT install install_rdf
+%{__make} INSTALLROOT=$RPM_BUILD_ROOT install install_rdf
 
 install doc/nasm.info* $RPM_BUILD_ROOT%{_infodir}
 gzip -9nf $RPM_BUILD_ROOT{%{_infodir}/*,%{_mandir}/man?/*} \

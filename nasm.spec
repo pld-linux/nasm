@@ -6,16 +6,17 @@ Summary(pt_BR):	O "Netwide Assembler"
 Summary(ru):	Netwide Assembler, переносимый x86 ассемблер с Intel-подобным синтаксисом
 Summary(uk):	Netwide Assembler, переносимий x86 асемблер з Intel-под╕бним синтаксисом
 Name:		nasm
-Version:	0.98.37
-Release:	1
-License:	GPL
+Version:	0.98.38
+Release:	1.1
+License:	LGPL v2.1
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
-# Source0-md5:	dbb9c410bfcf5cd0ccf6f71963d66abc
+# Source0-md5:	9f682490c132b070d54e395cb6ee145e
 Patch0:		%{name}-boguself2.patch
 Patch1:		%{name}-cpp_macros.patch
 Patch2:		%{name}-info.patch
-URL:		http://nasm.2y.net/
+Patch3:		%{name}-overflow.patch
+URL:		http://nasm.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	perl
 BuildRequires:	texinfo
@@ -36,7 +37,7 @@ Ensamblador de red.
 %description -l pl
 NASM jest asemblerem dla procesorСw 80x86 skonstruowanym z my╤l╠ o
 przeno╤no╤ci i modularno╤ci. Zawiera szerok╠ gamЙ obsЁugi obiektСw, w
-tym Linuxowe a.out i ELF, COFF, 16-bitowe OBJ Microsoft'u oraz Win32.
+tym linuksowe a.out i ELF, COFF, 16-bitowe OBJ Microsoft'u oraz Win32.
 Dostajemy czysty wynikowy plik binarny. SkЁadnia jest skonstruowana z
 my╤l╠ o prostocie i Ёatwo╤ci zrozumienia, podobna do Intel'owskiej,
 ale mniej komleksowa. Zawiera obsЁugЙ procesorСw Pentium, P6 oraz MMX
@@ -93,6 +94,7 @@ RDOFF, котрий ╕нод╕ використовують з NASM. Ц╕ ╕нструменти включають
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p0
 
 %build
 %configure

@@ -16,11 +16,11 @@ Patch0:		%{name}-boguself2.patch
 Patch1:		%{name}-cpp_macros.patch
 Patch2:		%{name}-info.patch
 URL:		http://nasm.2y.net/
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	autoconf
 BuildRequires:	perl
 BuildRequires:	texinfo
 Obsoletes:	nasm-doc
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 NASM is an 80x86 assembler designed for portability and modularity. It
@@ -107,7 +107,8 @@ makeinfo nasmdoc.texi
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_infodir},%{_mandir}/man1}
 
-%{__make} INSTALLROOT=$RPM_BUILD_ROOT install install_rdf
+%{__make} install install_rdf \
+	INSTALLROOT=$RPM_BUILD_ROOT
 
 install doc/nasm.info* $RPM_BUILD_ROOT%{_infodir}
 

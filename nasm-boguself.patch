@@ -1,5 +1,5 @@
---- nasm-0.98/outelf.c.elf	Tue Feb 13 17:14:52 2001
-+++ nasm-0.98/outelf.c	Tue Feb 13 17:20:17 2001
+--- nasm-0.98/outelf.c.boguself	Thu Jun  3 13:24:43 1999
++++ nasm-0.98/outelf.c	Thu Apr 26 11:53:44 2001
 @@ -922,13 +922,13 @@ static struct SAA *elf_build_symtab (lon
       * Now some standard symbols defining the segments, for relocation
       * purposes.
@@ -16,3 +16,12 @@
  	saa_wbytes (s, entry, 16L);
  	*len += 16;
  	(*local)++;
+@@ -986,7 +986,7 @@ static struct SAA *elf_build_reltab (lon
+ 	long sym = r->symbol;
+ 
+ 	if (sym >= GLOBAL_TEMP_BASE)
+-	    sym += -GLOBAL_TEMP_BASE + (nsects+3) + nlocals;
++	    sym += -GLOBAL_TEMP_BASE + (nsects+2) + nlocals;
+ 
+ 	p = entry;
+ 	WRITELONG (p, r->address);

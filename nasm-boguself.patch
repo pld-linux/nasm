@@ -1,0 +1,18 @@
+--- nasm-0.98/outelf.c.elf	Tue Feb 13 17:14:52 2001
++++ nasm-0.98/outelf.c	Tue Feb 13 17:20:17 2001
+@@ -922,13 +922,13 @@ static struct SAA *elf_build_symtab (lon
+      * Now some standard symbols defining the segments, for relocation
+      * purposes.
+      */
+-    for (i = 1; i <= nsects+1; i++) {
++    for (i = 1; i <= nsects; i++) {
+ 	p = entry;
+ 	WRITELONG (p, 0);	       /* no symbol name */
+ 	WRITELONG (p, 0);	       /* offset zero */
+ 	WRITELONG (p, 0);	       /* size zero */
+ 	WRITESHORT (p, 3);	       /* local section-type thing */
+-	WRITESHORT (p, (i==1 ? SHN_ABS : i-1));   /* the section id */
++	WRITESHORT (p, i);             /* the section id */
+ 	saa_wbytes (s, entry, 16L);
+ 	*len += 16;
+ 	(*local)++;

@@ -1,18 +1,13 @@
 Summary:	Nasm is a free assembler for the 80x86 series of microprocessors
 Summary(pl):	Nasm jest darmowym asemblerem dla procesorów z serii 80x86
 Name:		nasm
-Version:	0.98.08
-Release:	4
+Version:	0.98.32
+Release:	1
 License:	GPL
 Group:		Development/Tools
-Source0:	http://www.octium.net/nasm/packages/%{name}-%{version}.tar.gz
-# newer versions (ugly URLs!):
-# http://nasm.2y.net/download.php?action=download&id=24 (0.98.22)
-# ftp://ftp.octium.net/nasm/nasm-0.98.18.tar.tar
-Patch0:		%{name}-info.patch
-Patch1:		%{name}-boguself2.patch
-Patch2:		%{name}-cpp_macros.patch
-Patch3:		%{name}-disasm0x81.patch
+Source0:	http://telia.dl.sourceforge.net/sourceforge/nasm/%{name}-%{version}.tar.bz2
+Patch0:		%{name}-boguself2.patch
+Patch1:		%{name}-cpp_macros.patch
 URL:		http://nasm.2y.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	autoconf
@@ -57,11 +52,8 @@ zawieraj± linker, library manager, loader oraz information dump.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
-%patch3 -p1
 
 %build
-autoconf
 %configure
 
 %{__make} all rdf
@@ -76,8 +68,8 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_infodir},%{_mandir}/man1}
 
 install doc/nasm.info* $RPM_BUILD_ROOT%{_infodir}
 
-gzip -9nf Changes Licence Readme Wishlist MODIFIED \
-	rdoff/README rdoff/Changes
+gzip -9nf ChangeLog AUTHORS README TODO  \
+	rdoff/README
 
 %clean
 rm -rf $RPM_BUILD_ROOT

@@ -1,0 +1,22 @@
+--- nasm-0.98.08/nasm.c~	Mon Mar  5 13:07:28 2001
++++ nasm-0.98.08/nasm.c	Fri Nov 30 18:01:42 2001
+@@ -422,7 +422,8 @@
+ 	    using_debug_info = TRUE;
+ 	    break;
+ 	  case 'h':
+-	    printf("usage: nasm [-@ response file] [-o outfile] [-f format] "
++	    {const char *help_text =
++		   "usage: nasm [-@ response file] [-o outfile] [-f format] "
+ 		   "[-l listfile]\n"
+ 		   "            [options...] [--] filename\n"
+ 		   "    or nasm -r   for version info\n\n"
+@@ -443,7 +444,8 @@
+ 		   "    -D<macro>[=<value>] pre-defines a macro\n"
+ 		   "    -U<macro>   undefines a macro\n"
+ 		   "    -w+foo      enables warnings about foo; -w-foo disables them\n"
+-		   "where foo can be:\n");
++		   "where foo can be:\n";
++	    printf(help_text);}
+ 	    for (i=1; i<=ERR_WARN_MAX; i++)
+ 		printf("    %-16s%s (default %s)\n",
+ 		       suppressed_names[i], suppressed_what[i],

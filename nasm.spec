@@ -16,9 +16,9 @@ Obsoletes:	nasm-doc
 NASM is an 80x86 assembler designed for portability and modularity. It
 supports a range of object file formats including Linux a.out and ELF,
 COFF, Microsoft 16-bit OBJ and Win32. It will also output plain binary
-files. Its syntax is designed to be simple and easy to understand, similar
-to Intel's but less complex. It supports Pentium, P6 and MMX opcodes, and
-has macro capability. It includes a disassembler as well.
+files. Its syntax is designed to be simple and easy to understand,
+similar to Intel's but less complex. It supports Pentium, P6 and MMX
+opcodes, and has macro capability. It includes a disassembler as well.
 
 %package rdoff
 Summary:	Tools for the RDOFF binary format, sometimes used with NASM
@@ -28,9 +28,9 @@ Group(pl):	Programowanie/Narzêdzia
 Requires:	%{name} = %{version}
 
 %description rdoff
-Tools for the operating-system independent RDOFF binary format, which is
-sometimes used with the Netwide Assembler (NASM). These tools include
-linker, library manager, loader, and information dump.
+Tools for the operating-system independent RDOFF binary format, which
+is sometimes used with the Netwide Assembler (NASM). These tools
+include linker, library manager, loader, and information dump.
 
 %prep
 %setup -q

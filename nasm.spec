@@ -36,10 +36,10 @@ Ensamblador de red.
 %description -l pl
 NASM jest asemblerem dla procesorów 80x86 skonstruowanym z my¶l± o
 przeno¶no¶ci i modularno¶ci. Zawiera szerok± gamê obs³ugi obiektów, w
-tym Linuxowe a.out i ELF, COFF, 16-bitowe OBJ Microsoft'u oraz Win32.
+tym Linuxowe a.out i ELF, COFF, 16-bitowe OBJ Microsoftu oraz Win32.
 Dostajemy czysty wynikowy plik binarny. Sk³adnia jest skonstruowana z
-my¶l± o prostocie i ³atwo¶ci zrozumienia, podobna do Intel'owskiej,
-ale mniej komleksowa. Zawiera obs³ugê procesorów Pentium, P6 oraz MMX
+my¶l± o prostocie i ³atwo¶ci zrozumienia, podobna do intelowskiej, ale 
+mniej kompleksowa. Zawiera obs³ugê procesorów Pentium, P6 oraz MMX
 opcode i ma macro capability. Zawiera tak¿e deassembler.
 
 %description -l pt_BR

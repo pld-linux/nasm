@@ -1,14 +1,15 @@
 Summary:	Nasm is a free assembler for the 80x86 series of microprocessors
 Name:		nasm
 Version:	0.98
-Release:	5
+Release:	6
 License:	GPL
 Group:		Development/Tools
+Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
 URL:		http://www.cryogen.com/nasm/
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/lang/assemblers/%{name}-%{version}.tar.bz2
-Patch0:		nasm-info.patch
+Patch0:		%{name}-info.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	nasm-doc
 
@@ -23,6 +24,7 @@ opcodes, and has macro capability. It includes a disassembler as well.
 %package rdoff
 Summary:	Tools for the RDOFF binary format, sometimes used with NASM
 Group:		Development/Tools
+Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
 Requires:	%{name} = %{version}
@@ -38,7 +40,6 @@ include linker, library manager, loader, and information dump.
 
 %build
 autoconf
-LDFLAGS="-s"; export LDFLAGS
 %configure
 
 %{__make} all rdf
@@ -51,8 +52,8 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_infodir},%{_mandir}/man1}
 %{__make} INSTALLROOT=$RPM_BUILD_ROOT install install_rdf
 
 install doc/nasm.info* $RPM_BUILD_ROOT%{_infodir}
-gzip -9nf $RPM_BUILD_ROOT{%{_infodir}/*,%{_mandir}/man?/*} \
-	Changes Licence Readme Wishlist MODIFIED \
+
+gzip -9nf Changes Licence Readme Wishlist MODIFIED \
 	rdoff/README rdoff/Changes
 
 %post
@@ -69,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc *gz
 %attr(755,root,root) %{_bindir}/nasm
 %attr(755,root,root) %{_bindir}/ndisasm
-%{_infodir}/nasm.info*gz
+%{_infodir}/nasm.info*
 %{_mandir}/man?/*
 
 %files rdoff

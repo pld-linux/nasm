@@ -99,7 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files rdoff
 %defattr(644,root,root,755)
-%doc rdoff/README.gz rdoff/Changes.gz
+%doc rdoff/*.gz
 %attr(755,root,root) %{_bindir}/ldrdf
 %attr(755,root,root) %{_bindir}/rdf2bin
 %attr(755,root,root) %{_bindir}/rdf2com

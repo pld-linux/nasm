@@ -3,9 +3,11 @@ Name:		nasm
 Version:	0.98
 Release:	2
 Copyright:	GPL
+Group:		Development/Tools
+Group(pl):	Programowanie/Narzêdzia
 URL:		http://www.cryogen.com/nasm/
 Source:		ftp://sunsite.unc.edu/pub/Linux/devel/lang/assemblers/%{name}-%{version}.tar.bz2
-Group:		Development
+Patch:		nasm-info.patch
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -21,7 +23,7 @@ we could shake a large stick at.
 
 %prep
 %setup -q
-cp rdoff/README rdoff/README.rdoff
+%patch -p1
 
 %build
 autoconf

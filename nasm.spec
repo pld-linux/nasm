@@ -9,7 +9,7 @@ URL:		http://www.cryogen.com/nasm/
 Source:		ftp://sunsite.unc.edu/pub/Linux/devel/lang/assemblers/%{name}-%{version}.tar.bz2
 Patch:		nasm-info.patch
 Prereq:		/usr/sbin/fix-info-dir
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 NASM is an 80x86 assembler designed for portability and modularity. It

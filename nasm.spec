@@ -8,14 +8,14 @@ Summary(uk):	Netwide Assembler, переносимий x86 асемблер з Intel-под╕бним синтак
 Name:		nasm
 Version:	0.98.38
 Release:	1
-License:	GPL
+License:	LGPL v2.1
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	9f682490c132b070d54e395cb6ee145e
 Patch0:		%{name}-boguself2.patch
 Patch1:		%{name}-cpp_macros.patch
 Patch2:		%{name}-info.patch
-URL:		http://nasm.2y.net/
+URL:		http://nasm.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	perl
 BuildRequires:	texinfo

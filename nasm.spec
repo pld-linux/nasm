@@ -1,16 +1,18 @@
 Summary:	Nasm is a free assembler for the 80x86 series of microprocessors
 Name:		nasm
 Version:	0.98
-Release:	6
+Release:	7
 License:	GPL
 Group:		Development/Tools
 Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
-URL:		http://www.cryogen.com/nasm/
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/lang/assemblers/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-info.patch
+Patch1:		%{name}-3DNow.patch
+URL:		http://www.cryogen.com/nasm/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRequires:	texinfo
 BuildRequires:	perl
 Obsoletes:	nasm-doc
 
@@ -37,7 +39,8 @@ include linker, library manager, loader, and information dump.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
+%patch1 -p1
 
 %build
 autoconf
@@ -50,6 +53,7 @@ autoconf
 %install 
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_infodir},%{_mandir}/man1}
+
 %{__make} INSTALLROOT=$RPM_BUILD_ROOT install install_rdf
 
 install doc/nasm.info* $RPM_BUILD_ROOT%{_infodir}

@@ -29,13 +29,13 @@ similar to Intel's but less complex. It supports Pentium, P6 and MMX
 opcodes, and has macro capability. It includes a disassembler as well.
 
 %description -l pl
-NASM jest asemblerem dla procesorów 80x86 skonstruowanym z my¶l± o 
-przeno¶no¶ci i modularno¶ci. Zawiera szerok± gamê obs³ugi obiektów,
-w tym Linuxowe a.out i ELF, COFF, 16-bitowe OBJ Microsoft'u oraz Win32.
-Dostajemy czysty wynikowy plik binarny. Sk³adnia jest skonstruowana z 
+NASM jest asemblerem dla procesorów 80x86 skonstruowanym z my¶l± o
+przeno¶no¶ci i modularno¶ci. Zawiera szerok± gamê obs³ugi obiektów, w
+tym Linuxowe a.out i ELF, COFF, 16-bitowe OBJ Microsoft'u oraz Win32.
+Dostajemy czysty wynikowy plik binarny. Sk³adnia jest skonstruowana z
 my¶l± o prostocie i ³atwo¶ci zrozumienia, podobna do Intel'owskiej,
-ale mniej komleksowa. Zawiera obs³ugê procesorów Pentium, P6 oraz
-MMX opcode i ma macro capability. Zawiera tak¿e deassembler.
+ale mniej komleksowa. Zawiera obs³ugê procesorów Pentium, P6 oraz MMX
+opcode i ma macro capability. Zawiera tak¿e deassembler.
 
 %package rdoff
 Summary:	Tools for the RDOFF binary format, sometimes used with NASM
@@ -68,7 +68,7 @@ autoconf
 
 (cd doc; make nasmdoc.texi; makeinfo nasmdoc.texi)
 
-%install 
+%install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_infodir},%{_mandir}/man1}
 

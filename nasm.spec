@@ -17,7 +17,7 @@ Patch1:		%{name}-cpp_macros.patch
 Patch2:		%{name}-info.patch
 URL:		http://nasm.sourceforge.net/
 BuildRequires:	autoconf
-BuildRequires:	perl
+BuildRequires:	perl-base
 BuildRequires:	texinfo
 Obsoletes:	nasm-doc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

@@ -42,7 +42,7 @@ make prefix=$RPM_BUILD_ROOT/usr install install_rdf
 install -m644 doc/nasm.info $RPM_BUILD_ROOT%{_infodir}
 gzip -9nf $RPM_BUILD_ROOT%{_infodir}/nasm.info
 
-strip $RPM_BUILD_ROOT/usr/bin/* ||
+strip $RPM_BUILD_ROOT%{_bindir}/* ||
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -51,7 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc Changes Licence Readme Wishlist misc rdoff/README.rdoff rdoff/rdoff.txt
 %{_infodir}/nasm.info.gz
-/usr/bin/*
+%{_bindir}/*
 %attr(-,root,man) %{_mandir}/*/*
 
 %files doc

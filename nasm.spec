@@ -1,4 +1,5 @@
 Summary:	Nasm is a free assembler for the 80x86 series of microprocessors
+Summary(pl):	Nasm jest darmowym asemblerem dla procesorów z serii 80x86
 Name:		nasm
 Version:	0.98
 Release:	7
@@ -24,8 +25,18 @@ files. Its syntax is designed to be simple and easy to understand,
 similar to Intel's but less complex. It supports Pentium, P6 and MMX
 opcodes, and has macro capability. It includes a disassembler as well.
 
+%description -l pl
+NASM jest asemblerem dla procesorów 80x86 skonstruowanym z my¶l± o 
+przeno¶no¶ci i modularno¶ci. Zawiera szerok± gamê obs³ugi obiektów,
+w tym Linuxowe a.out i ELF, COFF, 16-bitowe OBJ Microsoft'u oraz Win32.
+Dostajemy czysty wynikowy plik binarny. Sk³adnia jest skonstruowana z 
+my¶l± o prostocie i ³atwo¶ci zrozumienia, podobna do Intel'owskiej,
+ale mniej komleksowa. Zawiera obs³ugê procesorów Pentium, P6 oraz
+MMX opcode i ma macro capability. Zawiera tak¿e deassembler.
+
 %package rdoff
 Summary:	Tools for the RDOFF binary format, sometimes used with NASM
+Summary(pl):	Tools'y do formatu binarnego RDOFF. Czasem u¿ywane z NASM'em.
 Group:		Development/Tools
 Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
@@ -36,6 +47,11 @@ Requires:	%{name} = %{version}
 Tools for the operating-system independent RDOFF binary format, which
 is sometimes used with the Netwide Assembler (NASM). These tools
 include linker, library manager, loader, and information dump.
+
+%description -l pl rdoff
+Tools'y do niezale¿nego od systemu operacyjnego formatu binarnego RDOFF,
+czasem u¿ywane z Netwide Assembler (NASM). Te narzêdzia zawieraj± linker,
+linker, library manager, loader oraz information dump.
 
 %prep
 %setup -q

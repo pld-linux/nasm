@@ -1,5 +1,10 @@
 Summary:	Nasm is a free assembler for the 80x86 series of microprocessors
+Summary(es):	Ensamblador de red
+Summary(ja):	IntelиВ╓нй╦к║╓Р╩Щ╓д╔щ║╪╔©╔ж╔К╓й x86 ╔╒╔╩╔С╔ж╔И
 Summary(pl):	Nasm jest darmowym asemblerem dla procesorСw z serii 80x86
+Summary(pt_BR):	O "Netwide Assembler"
+Summary(ru):	Netwide Assembler, переносимый x86 ассемблер с Intel-подобным синтаксисом
+Summary(uk):	Netwide Assembler, переносимий x86 асемблер з Intel-под╕бним синтаксисом
 Name:		nasm
 Version:	0.98.32
 Release:	1
@@ -23,6 +28,9 @@ files. Its syntax is designed to be simple and easy to understand,
 similar to Intel's but less complex. It supports Pentium, P6 and MMX
 opcodes, and has macro capability. It includes a disassembler as well.
 
+%description -l es
+Ensamblador de red.
+
 %description -l pl
 NASM jest asemblerem dla procesorСw 80x86 skonstruowanym z my╤l╠ o
 przeno╤no╤ci i modularno╤ci. Zawiera szerok╠ gamЙ obsЁugi obiektСw, w
@@ -32,9 +40,27 @@ my╤l╠ o prostocie i Ёatwo╤ci zrozumienia, podobna do Intel'owskiej,
 ale mniej komleksowa. Zawiera obsЁugЙ procesorСw Pentium, P6 oraz MMX
 opcode i ma macro capability. Zawiera tak©e deassembler.
 
+%description -l pt_BR
+Este И o NASM, o "Netwide Assembler". o NASM И um assembler para a
+familia x86 de processadores. Atualmente, ele sabe gerar binАrios
+puros, a.out, COFF, ELF, Microsoft Win32 e 16 bits DOS, OS/2, as86, e
+um formato "caseiro" chamado RDF.
+
+%description -l ru
+NASM - это Netwide Assembler, свободный переносимый ассемблер для
+серии микропроцессоров Intel 80x86. Использует в основном традиционные
+Интеловские мнемонику инструкций и синтаксис.
+
+%description -l uk
+NASM - це Netwide Assembler, в╕льний переносимий асемблер для сер╕╖
+м╕кропроцесор╕в Intel 80x86. Використову╓ в основному традиц╕йн╕
+╤нтел╕вськ╕ мнемон╕ку ╕нструкц╕й та синтаксис.
+
 %package rdoff
 Summary:	Tools for the RDOFF binary format, sometimes used with NASM
 Summary(pl):	NarzЙdzia do formatu binarnego RDOFF, czasem u©ywane z NASM-em
+Summary(ru):	Инструменты для бинарного формата RDOFF
+Summary(uk):	╤нструменти для б╕нарного формату RDOFF
 Group:		Development/Tools
 Requires:	%{name} = %{version}
 
@@ -47,6 +73,18 @@ include linker, library manager, loader, and information dump.
 NarzЙdzia do niezale©nego od systemu operacyjnego formatu binarnego
 RDOFF, czasem u©ywane z Netwide Assembler (NASM). Te narzЙdzia
 zawieraj╠ linker, library manager, loader oraz information dump.
+
+%description rdoff -l ru
+Инструменты для независимого от операционной системы бинарного формата
+RDOFF, который иногда используют с NASM. Эти инструменты включают
+редактор связей, библиотечный менеджер, загрузчик и программу выдачи
+информационнного дампа.
+
+%description rdoff -l uk
+╤нструменти для незалежного в╕д операц╕йно╖ системи б╕нарного формату
+RDOFF, котрий ╕нод╕ використовують з NASM. Ц╕ ╕нструменти включають
+редактор зв'язк╕в, б╕бл╕отечний менеджер, завантажувач та програму
+видач╕ ╕нформац╕йного дампу.
 
 %prep
 %setup -q

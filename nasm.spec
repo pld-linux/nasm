@@ -9,11 +9,14 @@ Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
 Source0:	http://www.octium.net/nasm/packages/%{name}-%{version}.tar.gz
+# newer versions (ugly URLs!):
+# http://nasm.2y.net/download.php?action=download&id=24 (0.98.22)
+# ftp://ftp.octium.net/nasm/nasm-0.98.18.tar.tar
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-boguself2.patch
 Patch2:		%{name}-cpp_macros.patch
 Patch3:		%{name}-disasm0x81.patch
-URL:		http://www.octium.net/nasm/
+URL:		http://nasm.2y.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	autoconf
 BuildRequires:	texinfo

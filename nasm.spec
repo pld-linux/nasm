@@ -5,9 +5,6 @@ Version:	0.98.08
 Release:	4
 License:	GPL
 Group:		Development/Tools
-Group(de):	Entwicklung/Werkzeuge
-Group(fr):	Development/Outils
-Group(pl):	Programowanie/Narzêdzia
 Source0:	http://www.octium.net/nasm/packages/%{name}-%{version}.tar.gz
 # newer versions (ugly URLs!):
 # http://nasm.2y.net/download.php?action=download&id=24 (0.98.22)
@@ -44,9 +41,6 @@ MMX opcode i ma macro capability. Zawiera tak¿e deassembler.
 Summary:	Tools for the RDOFF binary format, sometimes used with NASM
 Summary(pl):	Narzêdzia do formatu binarnego RDOFF, czasem u¿ywane z NASM-em
 Group:		Development/Tools
-Group(de):	Entwicklung/Werkzeuge
-Group(fr):	Development/Outils
-Group(pl):	Programowanie/Narzêdzia
 Requires:	%{name} = %{version}
 
 %description rdoff

@@ -26,7 +26,7 @@ Summary:	Tools for the RDOFF binary format, sometimes used with NASM
 Group:		Development/Tools
 Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
-Require:	%{name} = %{version}
+Requires:	%{name} = %{version}
 
 %description rdoff
 Tools for the operating-system independent RDOFF binary format, which is

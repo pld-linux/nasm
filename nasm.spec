@@ -7,7 +7,7 @@ Summary(ru):	Netwide Assembler, переносимый x86 ассемблер с Intel-подобным синта
 Summary(uk):	Netwide Assembler, переносимий x86 асемблер з Intel-под╕бним синтаксисом
 Name:		nasm
 Version:	0.98.35
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://telia.dl.sourceforge.net/sourceforge/nasm/%{name}-%{version}.tar.bz2
@@ -133,6 +133,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/ldrdf
 %attr(755,root,root) %{_bindir}/rdf2bin
 %attr(755,root,root) %{_bindir}/rdf2com
+%attr(755,root,root) %{_bindir}/rdf2ihx
 %attr(755,root,root) %{_bindir}/rdfdump
 %attr(755,root,root) %{_bindir}/rdflib
 %attr(755,root,root) %{_bindir}/rdx

@@ -1,13 +1,14 @@
 Summary:	Nasm is a free assembler for the 80x86 series of microprocessors
 Name:		nasm
 Version:	0.98
-Release:	2
+Release:	3
 Copyright:	GPL
 Group:		Development/Tools
 Group(pl):	Programowanie/Narzêdzia
 URL:		http://www.cryogen.com/nasm/
 Source:		ftp://sunsite.unc.edu/pub/Linux/devel/lang/assemblers/%{name}-%{version}.tar.bz2
 Patch:		nasm-info.patch
+Prereq:		/usr/sbin/fix-info-dir
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -18,9 +19,6 @@ files. Its syntax is designed to be simple and easy to understand, similar
 to Intel's but less complex. It supports Pentium, P6 and MMX opcodes, and
 has macro capability. It includes a disassembler as well. 
 
-Version 0.97 was entirely a bug fix release, since 0.96 had more bugs than
-we could shake a large stick at.
-
 %prep
 %setup -q
 %patch -p1
@@ -28,8 +26,8 @@ we could shake a large stick at.
 %build
 autoconf
 LDFLAGS="-s"; export LDFLAGS
-%configure \
-	--prefix=%{_prefix}
+%configure
+
 make all rdf
 
 (cd doc; make nasmdoc.texi; makeinfo nasmdoc.texi)
@@ -44,12 +42,10 @@ gzip -9nf $RPM_BUILD_ROOT{%{_infodir}/*,%{_mandir}/man?/*} \
 	Changes Licence Readme Wishlist MODIFIED
 
 %post
-/sbin/install-info %{_infodir}/nasm.info.gz /etc/info-dir
+/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
-%preun
-if [ "$1" = "0" ]; then
-	/sbin/install-info --delete %{_infodir}/nasm.info.gz /etc/info-dir
-fi
+%postun
+/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %clean
 rm -rf $RPM_BUILD_ROOT

@@ -2,7 +2,7 @@ Summary:	Nasm is a free assembler for the 80x86 series of microprocessors
 Summary(pl):	Nasm jest darmowym asemblerem dla procesorów z serii 80x86
 Name:		nasm
 Version:	0.98.08
-Release:	3
+Release:	4
 License:	GPL
 Group:		Development/Tools
 Group(de):	Entwicklung/Werkzeuge
@@ -12,6 +12,7 @@ Source0:	http://www.octium.net/nasm/packages/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-boguself2.patch
 Patch2:		%{name}-cpp_macros.patch
+Patch3:		%{name}-disasm0x81.patch
 URL:		http://www.octium.net/nasm/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	autoconf
@@ -50,7 +51,7 @@ Tools for the operating-system independent RDOFF binary format, which
 is sometimes used with the Netwide Assembler (NASM). These tools
 include linker, library manager, loader, and information dump.
 
-%description -l pl rdoff
+%description rdoff -l pl
 Narzêdzia do niezale¿nego od systemu operacyjnego formatu binarnego
 RDOFF, czasem u¿ywane z Netwide Assembler (NASM). Te narzêdzia
 zawieraj± linker, library manager, loader oraz information dump.
@@ -60,6 +61,7 @@ zawieraj± linker, library manager, loader oraz information dump.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 autoconf

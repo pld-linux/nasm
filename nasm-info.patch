@@ -1,0 +1,15 @@
+diff -Nru nasm-0.98/doc/rdsrc.pl nasm-0.98.new/doc/rdsrc.pl
+--- nasm-0.98/doc/rdsrc.pl	Thu Jun  3 22:25:00 1999
++++ nasm-0.98.new/doc/rdsrc.pl	Fri Jun  4 18:14:31 1999
+@@ -1519,9 +1519,9 @@
+   print "\input texinfo   \@c -*-texinfo-*-\n";
+   print "\@c \%**start of header\n";
+   print "\@setfilename nasm.info\n";
+-  print "\@dircategory Programming\n";
++  print "\@dircategory Programming tools:\n";
+   print "\@direntry\n";
+-  print "* NASM: (nasm).                The Netwide Assembler for x86.\n";
++  print "* NASM: (nasm)				The Netwide Assembler for x86.\n";
+   print "\@end direntry\n";
+   print "\@settitle NASM: The Netwide Assembler\n";
+   print "\@setchapternewpage odd\n";

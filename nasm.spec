@@ -11,6 +11,7 @@ URL:		http://www.cryogen.com/nasm/
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/lang/assemblers/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-info.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRequires:	perl
 Obsoletes:	nasm-doc
 
 %description

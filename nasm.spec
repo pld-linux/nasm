@@ -10,7 +10,7 @@ Version:	0.98.36
 Release:	1
 License:	GPL
 Group:		Development/Tools
-Source0:	http://telia.dl.sourceforge.net/sourceforge/nasm/%{name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5: eb676324be5598948888877cbb3e65b2
 Patch0:		%{name}-boguself2.patch
 Patch1:		%{name}-cpp_macros.patch

@@ -6,7 +6,7 @@ Summary(pt_BR):	O "Netwide Assembler"
 Summary(ru):	Netwide Assembler, переносимый x86 ассемблер с Intel-подобным синтаксисом
 Summary(uk):	Netwide Assembler, переносимий x86 асемблер з Intel-под╕бним синтаксисом
 Name:		nasm
-Version:	0.98.34
+Version:	0.98.35
 Release:	1
 License:	GPL
 Group:		Development/Tools

@@ -13,11 +13,12 @@ Group:		Development/Tools
 Source0:	http://telia.dl.sourceforge.net/sourceforge/nasm/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-boguself2.patch
 Patch1:		%{name}-cpp_macros.patch
+Patch2:		%{name}-info.patch
 URL:		http://nasm.2y.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	autoconf
-BuildRequires:	texinfo
 BuildRequires:	perl
+BuildRequires:	texinfo
 Obsoletes:	nasm-doc
 
 %description
@@ -90,13 +91,16 @@ RDOFF, котрий ╕нод╕ використовують з NASM. Ц╕ ╕нструменти включають
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %configure
 
 %{__make} all rdf
 
-(cd doc; make nasmdoc.texi; makeinfo nasmdoc.texi)
+cd doc
+%{__make} nasmdoc.texi
+makeinfo nasmdoc.texi
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -105,9 +109,6 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_infodir},%{_mandir}/man1}
 %{__make} INSTALLROOT=$RPM_BUILD_ROOT install install_rdf
 
 install doc/nasm.info* $RPM_BUILD_ROOT%{_infodir}
-
-gzip -9nf ChangeLog AUTHORS README TODO  \
-	rdoff/README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -120,7 +121,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *gz
+%doc ChangeLog AUTHORS README TODO
 %attr(755,root,root) %{_bindir}/nasm
 %attr(755,root,root) %{_bindir}/ndisasm
 %{_infodir}/nasm.info*
@@ -128,7 +129,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files rdoff
 %defattr(644,root,root,755)
-%doc rdoff/*.gz
+%doc rdoff/README
 %attr(755,root,root) %{_bindir}/ldrdf
 %attr(755,root,root) %{_bindir}/rdf2bin
 %attr(755,root,root) %{_bindir}/rdf2com

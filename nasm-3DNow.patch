@@ -1,0 +1,20 @@
+--- nasm-0.98.orig/insns.dat	Fri Jun  4 04:24:37 1999
++++ nasm-0.98/insns.dat	Tue Jun 27 23:34:59 2000
+@@ -1289,3 +1289,17 @@
+ PSADBW 		mmxreg,mem		\301\2\x0F\xF6\110		KATMAI,MMX,SM
+ PSHUFW          mmxreg,mmxreg,imm	\2\x0F\x70\110\22		KATMAI,MMX,SB,AR2
+ PSHUFW          mmxreg,mem,imm		\301\2\x0F\x70\110\22		KATMAI,MMX,SM2,SB,AR2
++PI2FD     mmxreg,mem          \301\2\x0F\x0F\110\01\x0D     PENT,3DNOW,SM
++PI2FD     mmxreg,mmxreg       \2\x0F\x0F\110\01\x0D         PENT,3DNOW
++PFNACC    mmxreg,mem          \301\2\x0F\x0F\110\01\x8A     PENT,3DNOW,SM
++PFNACC    mmxreg,mmxreg       \2\x0F\x0F\110\01\x8A         PENT,3DNOW
++PFPNACC   mmxreg,mem          \301\2\x0F\x0F\110\01\x8E     PENT,3DNOW,SM
++PFPNACC   mmxreg,mmxreg       \2\x0F\x0F\110\01\x8E         PENT,3DNOW
++PI2FW     mmxreg,mem          \301\2\x0F\x0F\110\01\x0C     PENT,3DNOW,SM
++PI2FW     mmxreg,mmxreg       \2\x0F\x0F\110\01\x0C         PENT,3DNOW
++PF2IW     mmxreg,mem          \301\2\x0F\x0F\110\01\x1C     PENT,3DNOW,SM
++PF2IW     mmxreg,mmxreg       \2\x0F\x0F\110\01\x1C         PENT,3DNOW
++PSWAPD    mmxreg,mem          \301\2\x0F\x0F\110\01\xBB     PENT,3DNOW,SM
++PSWAPD    mmxreg,mmxreg       \2\x0F\x0F\110\01\xBB         PENT,3DNOW,SM
++FFREEP    fpureg              \1\xDF\10\xC0                 PENT,3DNOW,FPU
++

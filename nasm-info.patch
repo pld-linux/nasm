@@ -9,7 +9,7 @@ diff -Nru nasm-0.98/doc/rdsrc.pl nasm-0.98.new/doc/rdsrc.pl
 +  print "\@dircategory Programming tools:\n";
    print "\@direntry\n";
 -  print "* NASM: (nasm).                The Netwide Assembler for x86.\n";
-+  print "* NASM: (nasm)				The Netwide Assembler for x86.\n";
++  print "* NASM: (nasm).				The Netwide Assembler for x86\n";
    print "\@end direntry\n";
    print "\@settitle NASM: The Netwide Assembler\n";
    print "\@setchapternewpage odd\n";

@@ -1,7 +1,7 @@
 Summary:	Nasm is a free assembler for the 80x86 series of microprocessors
 Name:		nasm
 Version:	0.98
-Release:	4
+Release:	5
 License:	GPL
 Group:		Development/Tools
 Group(fr):	Development/Outils

@@ -6,7 +6,7 @@ URL:       http://www.cryogen.com/nasm/
 Source:    ftp://sunsite.unc.edu/pub/Linux/devel/lang/assemblers/%{name}-%{version}.tar.gz
 Copyright: Distributable and free for non-commercial use
 Group:     Development
-BuildRoot: /tmp/%{name}-%{version}-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 NASM is an 80x86 assembler designed for portability and modularity. It

@@ -6,18 +6,15 @@ Summary(pt_BR):	O "Netwide Assembler"
 Summary(ru):	Netwide Assembler, переносимый x86 ассемблер с Intel-подобным синтаксисом
 Summary(uk):	Netwide Assembler, переносимий x86 асемблер з Intel-под╕бним синтаксисом
 Name:		nasm
-Version:	0.98.38
-Release:	2
+Version:	0.98.39
+Release:	1
 License:	LGPL v2.1
 Group:		Development/Tools
-Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
-# Source0-md5:	9f682490c132b070d54e395cb6ee145e
+Source0:	http://dl.sourceforge.net/nasm/%{name}-%{version}.tar.bz2
+# Source0-md5:	2032ad44c7359f7a9a166a40a633e772
 Patch0:		%{name}-boguself2.patch
-Patch1:		%{name}-cpp_macros.patch
-Patch2:		%{name}-info.patch
-Patch3:		%{name}-overflow.patch
+Patch1:		%{name}-info.patch
 URL:		http://nasm.sourceforge.net/
-BuildRequires:	autoconf
 BuildRequires:	perl-base
 BuildRequires:	texinfo
 Obsoletes:	nasm-doc
@@ -65,7 +62,7 @@ Summary(pl):	NarzЙdzia do formatu binarnego RDOFF, czasem u©ywane z NASM-em
 Summary(ru):	Инструменты для бинарного формата RDOFF
 Summary(uk):	╤нструменти для б╕нарного формату RDOFF
 Group:		Development/Tools
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description rdoff
 Tools for the operating-system independent RDOFF binary format, which
@@ -93,8 +90,6 @@ RDOFF, котрий ╕нод╕ використовують з NASM. Ц╕ ╕нструменти включають
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
-%patch3 -p0
 
 %build
 %configure

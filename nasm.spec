@@ -60,10 +60,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_infodir}/nasm.info*gz
 %{_mandir}/man?/*
-
-%changelog
-* Fri Jun  4 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [0.98-2]
-- based on spec from RH contrib,
-- rewrited to PLD coding style,
-- added {un}registering info pages for nasm.

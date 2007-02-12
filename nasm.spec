@@ -1,10 +1,10 @@
 Summary:	Nasm is a free assembler for the 80x86 series of microprocessors
-Summary(es):	Ensamblador de red
-Summary(ja):	IntelиВ╓нй╦к║╓Р╩Щ╓д╔щ║╪╔©╔ж╔К╓й x86 ╔╒╔╩╔С╔ж╔И
-Summary(pl):	Nasm jest darmowym asemblerem dla procesorСw z serii 80x86
-Summary(pt_BR):	O "Netwide Assembler"
-Summary(ru):	Netwide Assembler, переносимый x86 ассемблер с Intel-подобным синтаксисом
-Summary(uk):	Netwide Assembler, переносимий x86 асемблер з Intel-под╕бним синтаксисом
+Summary(es.UTF-8):   Ensamblador de red
+Summary(ja.UTF-8):   IntelИ╒╗Ц│╝Ф√┤ФЁ∙Ц┌▓Ф▄│Ц│╓Ц┐²Ц┐╪Ц┌©Ц┐√Ц┐╚Ц│╙ x86 Ц┌╒Ц┌╩Ц┐ЁЦ┐√Ц┐╘
+Summary(pl.UTF-8):   Nasm jest darmowym asemblerem dla procesorцЁw z serii 80x86
+Summary(pt_BR.UTF-8):   O "Netwide Assembler"
+Summary(ru.UTF-8):   Netwide Assembler, п©п╣я─п╣п╫п╬я│п╦п╪я▀п╧ x86 п╟я│я│п╣п╪п╠п╩п╣я─ я│ Intel-п©п╬п╢п╬п╠п╫я▀п╪ я│п╦п╫я┌п╟п╨я│п╦я│п╬п╪
+Summary(uk.UTF-8):   Netwide Assembler, п©п╣я─п╣п╫п╬я│п╦п╪п╦п╧ x86 п╟я│п╣п╪п╠п╩п╣я─ п╥ Intel-п©п╬п╢я√п╠п╫п╦п╪ я│п╦п╫я┌п╟п╨я│п╦я│п╬п╪
 Name:		nasm
 Version:	0.98.39
 Release:	2
@@ -28,39 +28,39 @@ files. Its syntax is designed to be simple and easy to understand,
 similar to Intel's but less complex. It supports Pentium, P6 and MMX
 opcodes, and has macro capability. It includes a disassembler as well.
 
-%description -l es
+%description -l es.UTF-8
 Ensamblador de red.
 
-%description -l pl
-NASM jest asemblerem dla procesorСw 80x86 skonstruowanym z my╤l╠ o
-przeno╤no╤ci i modularno╤ci. Zawiera szerok╠ gamЙ obsЁugi obiektСw, w
+%description -l pl.UTF-8
+NASM jest asemblerem dla procesorцЁw 80x86 skonstruowanym z myе⌡lд┘ o
+przenoе⌡noе⌡ci i modularnoе⌡ci. Zawiera szerokд┘ gamд≥ obsе┌ugi obiektцЁw, w
 tym linuksowe a.out i ELF, COFF, 16-bitowe OBJ Microsoftu oraz Win32.
-Dostajemy czysty wynikowy plik binarny. SkЁadnia jest skonstruowana z
-my╤l╠ o prostocie i Ёatwo╤ci zrozumienia, podobna do intelowskiej, ale 
-mniej kompleksowa. Zawiera obsЁugЙ procesorСw Pentium, P6 oraz MMX
-opcode i ma macro capability. Zawiera tak©e deassembler.
+Dostajemy czysty wynikowy plik binarny. Skе┌adnia jest skonstruowana z
+myе⌡lд┘ o prostocie i е┌atwoе⌡ci zrozumienia, podobna do intelowskiej, ale 
+mniej kompleksowa. Zawiera obsе┌ugд≥ procesorцЁw Pentium, P6 oraz MMX
+opcode i ma macro capability. Zawiera takе╪e deassembler.
 
-%description -l pt_BR
-Este И o NASM, o "Netwide Assembler". o NASM И um assembler para a
-familia x86 de processadores. Atualmente, ele sabe gerar binАrios
+%description -l pt_BR.UTF-8
+Este ц╘ o NASM, o "Netwide Assembler". o NASM ц╘ um assembler para a
+familia x86 de processadores. Atualmente, ele sabe gerar binц║rios
 puros, a.out, COFF, ELF, Microsoft Win32 e 16 bits DOS, OS/2, as86, e
 um formato "caseiro" chamado RDF.
 
-%description -l ru
-NASM - это Netwide Assembler, свободный переносимый ассемблер для
-серии микропроцессоров Intel 80x86. Использует в основном традиционные
-Интеловские мнемонику инструкций и синтаксис.
+%description -l ru.UTF-8
+NASM - я█я┌п╬ Netwide Assembler, я│п╡п╬п╠п╬п╢п╫я▀п╧ п©п╣я─п╣п╫п╬я│п╦п╪я▀п╧ п╟я│я│п╣п╪п╠п╩п╣я─ п╢п╩я▐
+я│п╣я─п╦п╦ п╪п╦п╨я─п╬п©я─п╬я├п╣я│я│п╬я─п╬п╡ Intel 80x86. п≤я│п©п╬п╩я▄п╥я┐п╣я┌ п╡ п╬я│п╫п╬п╡п╫п╬п╪ я┌я─п╟п╢п╦я├п╦п╬п╫п╫я▀п╣
+п≤п╫я┌п╣п╩п╬п╡я│п╨п╦п╣ п╪п╫п╣п╪п╬п╫п╦п╨я┐ п╦п╫я│я┌я─я┐п╨я├п╦п╧ п╦ я│п╦п╫я┌п╟п╨я│п╦я│.
 
-%description -l uk
-NASM - це Netwide Assembler, в╕льний переносимий асемблер для сер╕╖
-м╕кропроцесор╕в Intel 80x86. Використову╓ в основному традиц╕йн╕
-╤нтел╕вськ╕ мнемон╕ку ╕нструкц╕й та синтаксис.
+%description -l uk.UTF-8
+NASM - я├п╣ Netwide Assembler, п╡я√п╩я▄п╫п╦п╧ п©п╣я─п╣п╫п╬я│п╦п╪п╦п╧ п╟я│п╣п╪п╠п╩п╣я─ п╢п╩я▐ я│п╣я─я√я≈
+п╪я√п╨я─п╬п©я─п╬я├п╣я│п╬я─я√п╡ Intel 80x86. п▓п╦п╨п╬я─п╦я│я┌п╬п╡я┐я■ п╡ п╬я│п╫п╬п╡п╫п╬п╪я┐ я┌я─п╟п╢п╦я├я√п╧п╫я√
+п├п╫я┌п╣п╩я√п╡я│я▄п╨я√ п╪п╫п╣п╪п╬п╫я√п╨я┐ я√п╫я│я┌я─я┐п╨я├я√п╧ я┌п╟ я│п╦п╫я┌п╟п╨я│п╦я│.
 
 %package rdoff
 Summary:	Tools for the RDOFF binary format, sometimes used with NASM
-Summary(pl):	NarzЙdzia do formatu binarnego RDOFF, czasem u©ywane z NASM-em
-Summary(ru):	Инструменты для бинарного формата RDOFF
-Summary(uk):	╤нструменти для б╕нарного формату RDOFF
+Summary(pl.UTF-8):   Narzд≥dzia do formatu binarnego RDOFF, czasem uе╪ywane z NASM-em
+Summary(ru.UTF-8):   п≤п╫я│я┌я─я┐п╪п╣п╫я┌я▀ п╢п╩я▐ п╠п╦п╫п╟я─п╫п╬пЁп╬ я└п╬я─п╪п╟я┌п╟ RDOFF
+Summary(uk.UTF-8):   п├п╫я│я┌я─я┐п╪п╣п╫я┌п╦ п╢п╩я▐ п╠я√п╫п╟я─п╫п╬пЁп╬ я└п╬я─п╪п╟я┌я┐ RDOFF
 Group:		Development/Tools
 Requires:	%{name} = %{version}-%{release}
 
@@ -69,22 +69,22 @@ Tools for the operating-system independent RDOFF binary format, which
 is sometimes used with the Netwide Assembler (NASM). These tools
 include linker, library manager, loader, and information dump.
 
-%description rdoff -l pl
-NarzЙdzia do niezale©nego od systemu operacyjnego formatu binarnego
-RDOFF, czasem u©ywane z Netwide Assembler (NASM). Te narzЙdzia
-zawieraj╠ linker, library manager, loader oraz information dump.
+%description rdoff -l pl.UTF-8
+Narzд≥dzia do niezaleе╪nego od systemu operacyjnego formatu binarnego
+RDOFF, czasem uе╪ywane z Netwide Assembler (NASM). Te narzд≥dzia
+zawierajд┘ linker, library manager, loader oraz information dump.
 
-%description rdoff -l ru
-Инструменты для независимого от операционной системы бинарного формата
-RDOFF, который иногда используют с NASM. Эти инструменты включают
-редактор связей, библиотечный менеджер, загрузчик и программу выдачи
-информационнного дампа.
+%description rdoff -l ru.UTF-8
+п≤п╫я│я┌я─я┐п╪п╣п╫я┌я▀ п╢п╩я▐ п╫п╣п╥п╟п╡п╦я│п╦п╪п╬пЁп╬ п╬я┌ п╬п©п╣я─п╟я├п╦п╬п╫п╫п╬п╧ я│п╦я│я┌п╣п╪я▀ п╠п╦п╫п╟я─п╫п╬пЁп╬ я└п╬я─п╪п╟я┌п╟
+RDOFF, п╨п╬я┌п╬я─я▀п╧ п╦п╫п╬пЁп╢п╟ п╦я│п©п╬п╩я▄п╥я┐я▌я┌ я│ NASM. п╜я┌п╦ п╦п╫я│я┌я─я┐п╪п╣п╫я┌я▀ п╡п╨п╩я▌я┤п╟я▌я┌
+я─п╣п╢п╟п╨я┌п╬я─ я│п╡я▐п╥п╣п╧, п╠п╦п╠п╩п╦п╬я┌п╣я┤п╫я▀п╧ п╪п╣п╫п╣п╢п╤п╣я─, п╥п╟пЁя─я┐п╥я┤п╦п╨ п╦ п©я─п╬пЁя─п╟п╪п╪я┐ п╡я▀п╢п╟я┤п╦
+п╦п╫я└п╬я─п╪п╟я├п╦п╬п╫п╫п╫п╬пЁп╬ п╢п╟п╪п©п╟.
 
-%description rdoff -l uk
-╤нструменти для незалежного в╕д операц╕йно╖ системи б╕нарного формату
-RDOFF, котрий ╕нод╕ використовують з NASM. Ц╕ ╕нструменти включають
-редактор зв'язк╕в, б╕бл╕отечний менеджер, завантажувач та програму
-видач╕ ╕нформац╕йного дампу.
+%description rdoff -l uk.UTF-8
+п├п╫я│я┌я─я┐п╪п╣п╫я┌п╦ п╢п╩я▐ п╫п╣п╥п╟п╩п╣п╤п╫п╬пЁп╬ п╡я√п╢ п╬п©п╣я─п╟я├я√п╧п╫п╬я≈ я│п╦я│я┌п╣п╪п╦ п╠я√п╫п╟я─п╫п╬пЁп╬ я└п╬я─п╪п╟я┌я┐
+RDOFF, п╨п╬я┌я─п╦п╧ я√п╫п╬п╢я√ п╡п╦п╨п╬я─п╦я│я┌п╬п╡я┐я▌я┌я▄ п╥ NASM. п╕я√ я√п╫я│я┌я─я┐п╪п╣п╫я┌п╦ п╡п╨п╩я▌я┤п╟я▌я┌я▄
+я─п╣п╢п╟п╨я┌п╬я─ п╥п╡'я▐п╥п╨я√п╡, п╠я√п╠п╩я√п╬я┌п╣я┤п╫п╦п╧ п╪п╣п╫п╣п╢п╤п╣я─, п╥п╟п╡п╟п╫я┌п╟п╤я┐п╡п╟я┤ я┌п╟ п©я─п╬пЁя─п╟п╪я┐
+п╡п╦п╢п╟я┤я√ я√п╫я└п╬я─п╪п╟я├я√п╧п╫п╬пЁп╬ п╢п╟п╪п©я┐.
 
 %prep
 %setup -q

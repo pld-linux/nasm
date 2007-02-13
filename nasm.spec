@@ -1,10 +1,10 @@
 Summary:	Nasm is a free assembler for the 80x86 series of microprocessors
-Summary(es.UTF-8):   Ensamblador de red
-Summary(ja.UTF-8):   Intel風の文法を持つポータブルな x86 アセンブラ
-Summary(pl.UTF-8):   Nasm jest darmowym asemblerem dla procesorów z serii 80x86
-Summary(pt_BR.UTF-8):   O "Netwide Assembler"
-Summary(ru.UTF-8):   Netwide Assembler, переносимый x86 ассемблер с Intel-подобным синтаксисом
-Summary(uk.UTF-8):   Netwide Assembler, переносимий x86 асемблер з Intel-подібним синтаксисом
+Summary(es.UTF-8):	Ensamblador de red
+Summary(ja.UTF-8):	Intel風の文法を持つポータブルな x86 アセンブラ
+Summary(pl.UTF-8):	Nasm jest darmowym asemblerem dla procesorów z serii 80x86
+Summary(pt_BR.UTF-8):	O "Netwide Assembler"
+Summary(ru.UTF-8):	Netwide Assembler, переносимый x86 ассемблер с Intel-подобным синтаксисом
+Summary(uk.UTF-8):	Netwide Assembler, переносимий x86 асемблер з Intel-подібним синтаксисом
 Name:		nasm
 Version:	0.98.39
 Release:	2
@@ -58,9 +58,9 @@ NASM - це Netwide Assembler, вільний переносимий асемб�
 
 %package rdoff
 Summary:	Tools for the RDOFF binary format, sometimes used with NASM
-Summary(pl.UTF-8):   Narzędzia do formatu binarnego RDOFF, czasem używane z NASM-em
-Summary(ru.UTF-8):   Инструменты для бинарного формата RDOFF
-Summary(uk.UTF-8):   Інструменти для бінарного формату RDOFF
+Summary(pl.UTF-8):	Narzędzia do formatu binarnego RDOFF, czasem używane z NASM-em
+Summary(ru.UTF-8):	Инструменты для бинарного формата RDOFF
+Summary(uk.UTF-8):	Інструменти для бінарного формату RDOFF
 Group:		Development/Tools
 Requires:	%{name} = %{version}-%{release}
 

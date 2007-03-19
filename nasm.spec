@@ -7,12 +7,11 @@ Summary(ru):	Netwide Assembler, переносимый x86 ассемблер с Intel-подобным синта
 Summary(uk):	Netwide Assembler, переносимий x86 асемблер з Intel-под╕бним синтаксисом
 Name:		nasm
 Version:	0.98.38
-Release:	2
+Release:	3
 License:	LGPL v2.1
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	9f682490c132b070d54e395cb6ee145e
-Patch0:		%{name}-boguself2.patch
 Patch1:		%{name}-cpp_macros.patch
 Patch2:		%{name}-info.patch
 Patch3:		%{name}-overflow.patch
@@ -93,8 +92,7 @@ RDOFF, котрий ╕нод╕ використовують з NASM. Ц╕ ╕нструменти включають
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
-%patch3 -p0
+%patch2 -p0
 
 %build
 %configure

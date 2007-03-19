@@ -12,9 +12,9 @@ License:	LGPL v2.1
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	9f682490c132b070d54e395cb6ee145e
-Patch1:		%{name}-cpp_macros.patch
-Patch2:		%{name}-info.patch
-Patch3:		%{name}-overflow.patch
+Patch0:		%{name}-cpp_macros.patch
+Patch1:		%{name}-info.patch
+Patch2:		%{name}-overflow.patch
 URL:		http://nasm.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	perl-base

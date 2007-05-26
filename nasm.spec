@@ -6,12 +6,12 @@ Summary(pt_BR.UTF-8):	O "Netwide Assembler"
 Summary(ru.UTF-8):	Netwide Assembler, переносимый x86 ассемблер с Intel-подобным синтаксисом
 Summary(uk.UTF-8):	Netwide Assembler, переносимий x86 асемблер з Intel-подібним синтаксисом
 Name:		nasm
-Version:	0.98.39
-Release:	4
+Version:	0.99.00
+Release:	1
 License:	LGPL v2.1
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/nasm/%{name}-%{version}.tar.bz2
-# Source0-md5:	2032ad44c7359f7a9a166a40a633e772
+# Source0-md5:	12f72a09a07e5167a110572ab20a5d78
 Patch0:		%{name}-info.patch
 URL:		http://nasm.sourceforge.net/
 BuildRequires:	perl-base

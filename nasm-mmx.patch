@@ -1,0 +1,11 @@
+--- nasm-0.99.01/assemble.c.orig	2007-05-30 06:27:58.000000000 +0200
++++ nasm-0.99.01/assemble.c	2007-08-06 00:38:39.791773786 +0200
+@@ -1497,7 +1497,7 @@
+ 
+     if (val >= 8)
+ 	rex |= REX_B|REX_X|REX_R;
+-    if (flags & BITS64)
++    if ((flags & BITS64) && !(flags & 0x03000000)) /* 64-bit, but not FPU/MMX */
+ 	rex |= REX_W;
+     if (!(REG_HIGH & ~flags))	/* AH, CH, DH, BH */
+ 	rex |= REX_H;

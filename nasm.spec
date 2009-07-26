@@ -6,12 +6,12 @@ Summary(pt_BR.UTF-8):	O "Netwide Assembler"
 Summary(ru.UTF-8):	Netwide Assembler, переносимый x86 ассемблер с Intel-подобным синтаксисом
 Summary(uk.UTF-8):	Netwide Assembler, переносимий x86 асемблер з Intel-подібним синтаксисом
 Name:		nasm
-Version:	2.06
+Version:	2.07
 Release:	1
 License:	LGPL v2.1
 Group:		Development/Tools
 Source0:	http://www.nasm.us/pub/nasm/releasebuilds/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	0db94e88fd9b7a360f826f9ffd6c0fc7
+# Source0-md5:	d8934231e81874c29374ddef1fbdb1ed
 Patch0:		%{name}-info.patch
 URL:		http://www.nasm.us/
 BuildRequires:	perl-base
@@ -92,7 +92,7 @@ RDOFF, котрий іноді використовують з NASM. Ці інс
 %build
 %configure
 
-%{__make} all rdf
+%{__make} -j1 all rdf
 
 cd doc
 %{__make} nasmdoc.texi
@@ -131,6 +131,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/rdf2bin
 %attr(755,root,root) %{_bindir}/rdf2com
 %attr(755,root,root) %{_bindir}/rdf2ihx
+%attr(755,root,root) %{_bindir}/rdf2ith
+%attr(755,root,root) %{_bindir}/rdf2srec
 %attr(755,root,root) %{_bindir}/rdfdump
 %attr(755,root,root) %{_bindir}/rdflib
 %attr(755,root,root) %{_bindir}/rdx

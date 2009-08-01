@@ -8,7 +8,7 @@ Summary(uk.UTF-8):	Netwide Assembler, переносимий x86 асембле�
 Name:		nasm
 Version:	2.07
 Release:	1
-License:	LGPL v2.1
+License:	BSD
 Group:		Development/Tools
 Source0:	http://www.nasm.us/pub/nasm/releasebuilds/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	d8934231e81874c29374ddef1fbdb1ed

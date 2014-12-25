@@ -15,7 +15,9 @@ Source0:	http://www.nasm.us/pub/nasm/releasebuilds/%{version}/%{name}-%{version}
 Patch0:		%{name}-info.patch
 URL:		http://www.nasm.us/
 BuildRequires:	perl-base
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	texinfo
+BuildRequires:	xz
 Obsoletes:	nasm-doc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

@@ -6,17 +6,15 @@ Summary(pt_BR.UTF-8):	O "Netwide Assembler"
 Summary(ru.UTF-8):	Netwide Assembler, переносимый x86 ассемблер с Intel-подобным синтаксисом
 Summary(uk.UTF-8):	Netwide Assembler, переносимий x86 асемблер з Intel-подібним синтаксисом
 Name:		nasm
-Version:	2.11.06
-Release:	2
+Version:	2.13.01
+Release:	1
 License:	BSD
 Group:		Development/Tools
 Source0:	http://www.nasm.us/pub/nasm/releasebuilds/%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	2b958e9f5d200641e6fc9564977aecc5
-Patch0:		%{name}-info.patch
+# Source0-md5:	b3ae134bd1b5ead73d659286f568da95
 URL:		http://www.nasm.us/
 BuildRequires:	perl-base
 BuildRequires:	tar >= 1:1.22
-BuildRequires:	texinfo
 BuildRequires:	xz
 Obsoletes:	nasm-doc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,12 +32,13 @@ Ensamblador de red.
 
 %description -l pl.UTF-8
 NASM jest asemblerem dla procesorów 80x86 skonstruowanym z myślą o
-przenośności i modularności. Zawiera szeroką gamę obsługi obiektów, w
-tym linuksowe a.out i ELF, COFF, 16-bitowe OBJ Microsoftu oraz Win32.
-Dostajemy czysty wynikowy plik binarny. Składnia jest skonstruowana z
-myślą o prostocie i łatwości zrozumienia, podobna do intelowskiej, ale 
-mniej kompleksowa. Zawiera obsługę procesorów Pentium, P6 oraz MMX
-opcode i ma macro capability. Zawiera także deassembler.
+przenośności i modularności. Obsługuje szeroką gamę plików
+obiektowych, w tym linuksowe a.out i ELF, COFF, 16-bitowe OBJ
+Microsoftu oraz Win32. Może także zapisywać zwykłe pliki binarne.
+Składnia jest opracowana z myślą o prostocie i łatwości zrozumienia,
+podobna do intelowskiej, ale mniej złożona. Zawiera obsługę instrukcji
+procesórów Pentium i P6 oraz MMX, obsługuje też makra. Zawiera także
+deassembler.
 
 %description -l pt_BR.UTF-8
 Este é o NASM, o "Netwide Assembler". o NASM é um assembler para a
@@ -72,8 +71,9 @@ include linker, library manager, loader, and information dump.
 
 %description rdoff -l pl.UTF-8
 Narzędzia do niezależnego od systemu operacyjnego formatu binarnego
-RDOFF, czasem używane z Netwide Assembler (NASM). Te narzędzia
-zawierają linker, library manager, loader oraz information dump.
+RDOFF, czasem używanego z programem NASM (Netwide Assembler). Te
+narzędzia zawierają linker, zarządcę bibliotek, loader oraz narzędzie
+do zrzucania informacji.
 
 %description rdoff -l ru.UTF-8
 Инструменты для независимого от операционной системы бинарного формата
@@ -89,42 +89,31 @@ RDOFF, котрий іноді використовують з NASM. Ці інс
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %configure
 
 %{__make} -j1 all rdf
 
-cd doc
-%{__make} nasmdoc.texi
-makeinfo nasmdoc.texi
+%{__make} -C doc html
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_infodir},%{_mandir}/man1}
+#install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 %{__make} install install_rdf \
 	INSTALLROOT=$RPM_BUILD_ROOT
 
-install doc/nasm.info* $RPM_BUILD_ROOT%{_infodir}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p	/sbin/postshell
--/usr/sbin/fix-info-dir -c %{_infodir}
-
-%postun	-p	/sbin/postshell
--/usr/sbin/fix-info-dir -c %{_infodir}
-
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog AUTHORS README TODO
+%doc ChangeLog AUTHORS README TODO doc/html
 %attr(755,root,root) %{_bindir}/nasm
 %attr(755,root,root) %{_bindir}/ndisasm
-%{_infodir}/nasm.info*
-%{_mandir}/man?/*
+%{_mandir}/man1/nasm.1*
+%{_mandir}/man1/ndisasm.1*
 
 %files rdoff
 %defattr(644,root,root,755)
@@ -138,3 +127,12 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/rdfdump
 %attr(755,root,root) %{_bindir}/rdflib
 %attr(755,root,root) %{_bindir}/rdx
+%{_mandir}/man1/ldrdf.1*
+%{_mandir}/man1/rdf2bin.1*
+%{_mandir}/man1/rdf2com.1*
+%{_mandir}/man1/rdf2ihx.1*
+%{_mandir}/man1/rdf2ith.1*
+%{_mandir}/man1/rdf2srec.1*
+%{_mandir}/man1/rdfdump.1*
+%{_mandir}/man1/rdflib.1*
+%{_mandir}/man1/rdx.1*

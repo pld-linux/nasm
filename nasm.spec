@@ -99,7 +99,6 @@ RDOFF, котрий іноді використовують з NASM. Ці інс
 
 %install
 rm -rf $RPM_BUILD_ROOT
-#install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 %{__make} install install_rdf \
 	INSTALLROOT=$RPM_BUILD_ROOT

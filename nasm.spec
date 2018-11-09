@@ -6,12 +6,12 @@ Summary(pt_BR.UTF-8):	O "Netwide Assembler"
 Summary(ru.UTF-8):	Netwide Assembler, переносимый x86 ассемблер с Intel-подобным синтаксисом
 Summary(uk.UTF-8):	Netwide Assembler, переносимий x86 асемблер з Intel-подібним синтаксисом
 Name:		nasm
-Version:	2.13.02
+Version:	2.14
 Release:	1
 License:	BSD
 Group:		Development/Tools
 Source0:	http://www.nasm.us/pub/nasm/releasebuilds/%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	abb79a82fa30908217e30f76eca8a557
+# Source0-md5:	7d0f554cacd6c5021b3cda3ba9f2474c
 URL:		http://www.nasm.us/
 BuildRequires:	perl-base
 BuildRequires:	tar >= 1:1.22
@@ -101,7 +101,7 @@ RDOFF, котрий іноді використовують з NASM. Ці інс
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install install_rdf \
-	INSTALLROOT=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
